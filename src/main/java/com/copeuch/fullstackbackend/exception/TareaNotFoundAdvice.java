@@ -1,4 +1,4 @@
-package com.codewitharjun.fullstackbackend.exception;
+package com.copeuch.fullstackbackend.exception;
 /* Created by Arjun Gautam */
 
 import org.springframework.http.HttpStatus;
@@ -11,13 +11,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @ControllerAdvice
-public class UserNotFoundAdvice {
+public class TareaNotFoundAdvice {
 
 
     @ResponseBody
-    @ExceptionHandler(UserNotFoundException.class)
+    @ExceptionHandler(TareaNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public Map<String,String> exceptionHandler(UserNotFoundException exception){
+    public Map<String,String> exceptionHandler(TareaNotFoundException exception){
 
         Map<String,String> errorMap=new HashMap<>();
         errorMap.put("errorMessage",exception.getMessage());
